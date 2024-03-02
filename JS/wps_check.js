@@ -5,7 +5,7 @@ WPS Office for Mac 解锁部分功能
 QuantumultX:
 
 [rewrite_local]
-^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/p\/auth\/check url script-response-body https://raw.githubusercontent.com/taotie6/scripts/main/JS/was_check.js
+^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/p\/auth\/check url script-response-body https://raw.githubusercontent.com/taotie6/scripts/main/JS/wps_check.js
 
 [mitm]
 hostname = *account.wps.cn, *account.wps.com
@@ -14,7 +14,7 @@ hostname = *account.wps.cn, *account.wps.com
 Surge4 or Loon:
 
 [Script]
-http-response ^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/p\/auth\/check requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/taotie6/scripts/main/JS/was_check.js
+http-response ^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/p\/auth\/check requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/taotie6/scripts/main/JS/wps_check.js
 
 [MITM]
 hostname = *account.wps.cn, *account.wps.com
