@@ -19,7 +19,7 @@
           "desc": "JSON 数组；每项包含 name（可选）、iccid、simType。simType 只能填 SIM 或 eSIM。"
         }
       ],
-      "script": "https://raw.githubusercontent.com/taotie6/scripts/master/banana-travelsim.js",
+      "script": "https://raw.githubusercontent.com/taotie6/scripts/main/scripts/banana-travelsim.js",
       "icons": [
         "https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/telecom.png",
         "https://raw.githubusercontent.com/NobyDa/mini/master/Color/telecom.png"
@@ -28,7 +28,7 @@
   ],
   "task": [
     {
-      "config": "0 9 * * * https://raw.githubusercontent.com/taotie6/scripts/master/banana-travelsim.js, tag=Banana Travel SIM, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/telecom.png",
+      "config": "0 9 * * * https://raw.githubusercontent.com/taotie6/scripts/main/scripts/banana-travelsim.js, tag=Banana Travel SIM, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/telecom.png",
       "addons": "https://raw.githubusercontent.com/taotie6/scripts/master/banana-travelsim.snippet, tag=Banana Travel SIM(获取Cookie/重写)"
     }
   ]
