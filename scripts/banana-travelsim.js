@@ -2,7 +2,7 @@
 脚本名称：Banana Travel SIM流量查询
 Version  : v1.0.0
 更新时间：2026-06-20
-作者：Curtinp118
+作者：taotie6
 Platform : Quantumult X
 脚本功能：查询 Banana Travel SIM 多张 SIM/eSIM 流量并合并通知
 使用说明：先通过 BoxJS 配置 SIM 卡信息，再通过定时任务执行
