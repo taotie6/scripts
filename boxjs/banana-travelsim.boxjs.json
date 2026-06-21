@@ -1,0 +1,24 @@
+{
+  "id": "taotie6.banana-travelsim",
+  "name": "Banana Travel SIM",
+  "author": "Curtinp118",
+  "repo": "https://github.com/taotie6/scripts",
+  "apps": [
+    {
+      "id": "banana-travelsim",
+      "name": "Banana Travel SIM",
+      "keys": [
+        "banana_travelsim_cards"
+      ],
+      "settings": [
+        {
+          "id": "banana_travelsim_cards",
+          "name": "SIM 卡配置",
+          "val": "[\n  {\n    \"name\": \"中澳台 eSIM\",\n    \"iccid\": \"898xxxxxxxxxxxxxxx\",\n    \"simType\": \"eSIM\"\n  },\n  {\n    \"name\": \"备用 SIM\",\n    \"iccid\": \"898xxxxxxxxxxxxxxx\",\n    \"simType\": \"SIM\"\n  }\n]",
+          "type": "textarea",
+          "desc": "JSON 数组；每项包含 name（可选）、iccid、simType。simType 只能填 SIM 或 eSIM。"
+        }
+      ]
+    }
+  ]
+}
