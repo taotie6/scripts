@@ -1,48 +1,48 @@
 {
   "id": "ZenMoFiShi.iios",
-  "name": "iios.fun 登录签到",
+  "name": "iios.fun 签到",
   "author": "@ZenMoFiShi",
   "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/appstore.png",
   "repo": "https://raw.githubusercontent.com/taotie6/scripts/main/scripts/iios_checkin.js",
   "apps": [
     {
       "id": "minis.iios.login",
-      "name": "iios.fun 登录签到",
+      "name": "iios.fun 签到",
       "keys": [
-        "iios_login_accounts",
-        "iios_login_email",
-        "iios_login_password",
-        "iios_client_id"
+        "iios_token",
+        "iios_cookie",
+        "iios_user_agent",
+        "iios_sessions"
       ],
       "settings": [
         {
-          "id": "iios_login_accounts",
-          "name": "多账号配置",
+          "id": "iios_token",
+          "name": "Token",
+          "val": "",
+          "type": "text",
+          "desc": "浏览器 localStorage.token 或请求头 Authorization 去掉 Basic 后的值。脚本请求阶段会自动捕获 /api 请求中的 Authorization"
+        },
+        {
+          "id": "iios_cookie",
+          "name": "Cookie",
           "val": "",
           "type": "textarea",
-          "placeholder": "邮箱@密码,邮箱2@密码2",
-          "desc": "多账号格式：邮箱@密码,邮箱2@密码2（按最后一个@分割账号密码，英文逗号分隔多个账号）。填写此项后优先使用多账号，下方单账号字段将被忽略"
+          "desc": "可选，填入浏览器请求中的 Cookie，包含 cf_clearance 时可提高通过 Cloudflare 的概率。脚本请求阶段会自动捕获"
         },
         {
-          "id": "iios_login_email",
-          "name": "登录邮箱（单账号）",
+          "id": "iios_user_agent",
+          "name": "User-Agent",
           "val": "",
-          "type": "text",
-          "desc": "单账号模式：iios.fun 登录邮箱。若已填写上方多账号配置则此项无效"
+          "type": "textarea",
+          "desc": "可选，默认使用桌面 Chrome UA；如配置 Cookie，建议和抓包请求的 User-Agent 保持一致"
         },
         {
-          "id": "iios_login_password",
-          "name": "登录密码（单账号）",
+          "id": "iios_sessions",
+          "name": "多账号会话",
           "val": "",
-          "type": "password",
-          "desc": "单账号模式：iios.fun 登录密码。若已填写上方多账号配置则此项无效"
-        },
-        {
-          "id": "iios_client_id",
-          "name": "客户端标识",
-          "val": "default",
-          "type": "text",
-          "desc": "可选，用于区分不同设备/用户"
+          "type": "textarea",
+          "placeholder": "[{\"label\":\"账号1\",\"token\":\"xxx\",\"cookie\":\"cf_clearance=...\",\"userAgent\":\"Mozilla/5.0 ...\"}]",
+          "desc": "可选。支持 JSON 数组；也支持每行 token|cookie|userAgent。填写后优先使用多账号配置"
         }
       ],
       "author": "@ZenMoFiShi",
